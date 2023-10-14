@@ -1,4 +1,4 @@
-# mpesa-api
+# mpesa-api-nodejs
 API escrita em NodeJS para M-PESA (Moçambique)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -7,13 +7,13 @@ Esta API (Aplication programing interface), permite efectuar transações no m-p
 
 ## Instalação
 ```bash
-npm install mpesa-api
+npm install mpesa-api-nodejs
 ```
 ## Implementação
 
 Primeiramente crie uma conta no site https://developer.mpesa.vm.co.mz/ e obtenha a **api key** e o **public key**
 ```JavaScript
-const MpesaAPI = require("mpesa-api");
+const MpesaAPI = require("mpesa-api-nodejs");
 
 const api_key = "";		// Aqui introduz a api key disponibilizada no site
 const public_key = "";	// Aqui introduz o public key disponibilizado no site

@@ -1,5 +1,5 @@
 {
-  "name": "mpesa-api",
+  "name": "mpesa-api-nodejs",
   "version": "1.0.0",
   "description": "Biblioteca em NodeJS para M-PESA (Moçambique)",
   "main": "dist/index.js",
