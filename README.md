@@ -7,7 +7,7 @@ Esta API (Aplication programing interface), permite efectuar transações no m-p
 
 ## Instalação
 ```bash
-composer require emagombe/mpesa-api
+npm install mpesa-api
 ```
 ## Implementação
 
