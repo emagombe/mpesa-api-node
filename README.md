@@ -3,9 +3,6 @@ API escrita em NodeJS para M-PESA (Moçambique)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-[![Watch on GitHub](https://img.shields.io/github/watchers/jonsn0w/hyde.svg?style=social)](https://github.com/jonsn0w/Hyde/watchers)
-[![Star on GitHub](https://img.shields.io/github/stars/jonsn0w/hyde.svg?style=social)](https://github.com/jonsn0w/hyde/stargazers)
-
 Esta API (Aplication programing interface), permite efectuar transações no m-pesa usando o NodeJS.
 
 ## Instalação
