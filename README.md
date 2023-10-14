@@ -15,11 +15,11 @@ Primeiramente crie uma conta no site https://developer.mpesa.vm.co.mz/ e obtenha
 ```JavaScript
 const MpesaAPI = require("mpesa-api");
 
-const api_key = "";		# Aqui introduz a api key disponibilizada no site
-const public_key = "";	# Aqui introduz o public key disponibilizado no site
-const ssl = true;		# True se pretende utilizar uma conexão segura (SSL)
+const api_key = "";		// Aqui introduz a api key disponibilizada no site
+const public_key = "";	// Aqui introduz o public key disponibilizado no site
+const ssl = true;		// True se pretende utilizar uma conexão segura (SSL)
 
-# Inicialização e criação do objecto
+// Inicialização e criação do objecto
 const mpesa = MpesaAPI.init(api_key, public_key, ssl);
 ```
 ### Transferência business to client (de negócio para cliente)
