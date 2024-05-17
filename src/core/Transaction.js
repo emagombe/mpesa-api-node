@@ -6,16 +6,19 @@ class Transaction {
 	api_key = null;
 	public_key = null;
 	ssl = null;
+	is_production = false;
+	base_url = "api.sandbox.vm.co.mz";
 
-	constructor(api_key, public_key, ssl = true) {
+	constructor(api_key, public_key, environment = "development", ssl = true) {
 		this.api_key = api_key;
 		this.public_key = public_key;
 		this.ssl = ssl;
+		this.is_production = environment == "production";
+		this.base_url = this.is_production ? "api.vm.co.mz" : "api.sandbox.vm.co.mz";
 	}
 
 	c2b = async (data) => {
-		
-		const url = "https://api.sandbox.vm.co.mz:18352/ipg/v1x/c2bPayment/singleStage/";
+		const url = `https://${this.base_url}:18352/ipg/v1x/c2bPayment/singleStage/`;
 
 		const params = {
 			input_Amount: data.value,
@@ -32,7 +35,7 @@ class Transaction {
 
 	b2c = async (data) => {
 		
-		const url = "https://api.sandbox.vm.co.mz:18345/ipg/v1x/b2cPayment/";
+		const url = `https://${this.base_url}:18345/ipg/v1x/b2cPayment/`;
 
 		const params = {
 			input_Amount: data.value,
@@ -49,7 +52,7 @@ class Transaction {
 
 	b2b = async (data) => {
 		
-		const url = "https://api.sandbox.vm.co.mz:18349/ipg/v1x/b2bPayment/";
+		const url = `https://${this.base_url}:18349/ipg/v1x/b2bPayment/`;
 
 		const params = {
 			input_PrimaryPartyCode: data.agent_id,
@@ -66,7 +69,7 @@ class Transaction {
 
 	reversal = async (data) => {
 		
-		const url = "https://api.sandbox.vm.co.mz:18354/ipg/v1x/reversal/";
+		const url = `https://${this.base_url}:18354/ipg/v1x/reversal/`;
 
 		const params = {
 			input_TransactionID: data.transaction_id,
@@ -84,7 +87,7 @@ class Transaction {
 
 	status = async (data) => {
 		
-		const url = "https://api.sandbox.vm.co.mz:18353/ipg/v1x/queryTransactionStatus/";
+		const url = `https://${this.base_url}:18353/ipg/v1x/queryTransactionStatus/`;
 
 		const params = {
 			input_QueryReference: data.transaction_id,
@@ -99,7 +102,7 @@ class Transaction {
 
 	customer_name = async (data) => {
 		
-		const url = "https://api.sandbox.vm.co.mz:19323/ipg/v1x/queryCustomerName/";
+		const url = `https://${this.base_url}:19323/ipg/v1x/queryCustomerName/`;
 
 		const params = {
 			input_CustomerMSISDN: data.client_number,
