@@ -17,10 +17,11 @@ const MpesaAPI = require("mpesa-api-nodejs");
 
 const api_key = "";		// Aqui introduz a api key disponibilizada no site
 const public_key = "";	// Aqui introduz o public key disponibilizado no site
+const environment = "development"; // development/production
 const ssl = true;		// True se pretende utilizar uma conexão segura (SSL)
 
 // Inicialização e criação do objecto
-const mpesa = MpesaAPI.init(api_key, public_key, ssl);
+const mpesa = MpesaAPI.init(api_key, public_key, environment, ssl);
 ```
 ### Transferência business to client (de negócio para cliente)
 Transferência de valor do agente para o clinte
